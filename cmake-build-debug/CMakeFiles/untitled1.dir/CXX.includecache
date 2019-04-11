@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/untitled1/bst.cpp
+bst.h
+/Users/student/Desktop/untitled1/bst.h
+time.h
+/Users/student/Desktop/untitled1/time.h
+iomanip
+-
+sstream
+-
+
+/Users/student/Desktop/untitled1/bst.h
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+
+/Users/student/Desktop/untitled1/twoThree.cpp
+
