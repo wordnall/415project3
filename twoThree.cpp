@@ -1,5 +1,5 @@
 
-private E findhelp(TTNode<Key,E> root, Key k) {
+E findhelp(TTNode<Key,E> root, Key k) {
     if (root == null) return null;          // val not found
     if (k.compareTo(root.lkey()) == 0) return root.lval();
     if ((root.rkey() != null) && (k.compareTo(root.rkey())
@@ -14,7 +14,7 @@ private E findhelp(TTNode<Key,E> root, Key k) {
     else return findhelp(root.rchild(), k); // Search right
 }
 
-private TTNode<Key,E> inserthelp(TTNode<Key,E> rt, Key k, E e) {
+TTNode<Key,E> inserthelp(TTNode<Key,E> rt, Key k, E e) {
     TTNode<Key,E> retval;
     if (rt == null) // Empty tree: create a leaf node for root
         return new TTNode<Key,E>(k, e, null, null, null, null, null);
@@ -42,7 +42,7 @@ private TTNode<Key,E> inserthelp(TTNode<Key,E> rt, Key k, E e) {
 // associated with the record being added. This information comes
 // in the form of a 2-3 tree node with one key and a (possibly null)
 // subtree through the center pointer field.
-public TTNode<Key,E> add(TTNode<Key,E> it) {
+TTNode<Key,E> add(TTNode<Key,E> it) {
     if (rkey == null) { // Only one key, add here
         if (lkey.compareTo(it.lkey()) < 0) {
             rkey = it.lkey(); rval = it.lval();
